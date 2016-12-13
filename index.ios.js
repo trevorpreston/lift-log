@@ -36,8 +36,7 @@ export default class AwesomeProject extends Component {
           </Title>
         </Header>
         <WorkoutForm greeting={this.state.message} availableWorkouts={this.state.availableWorkouts}/>
-        <Text style={styles.welcome}>
-        </Text>
+        <Text style={styles.welcome}></Text>
       </View>
     );
   }
