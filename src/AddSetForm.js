@@ -3,9 +3,11 @@ import {
   AppRegistry, 
   StyleSheet, 
   Text, 
+  Button,
   View,
   Navigator,
   NavigatorIOS,
+  TextInput,
   TouchableHighlight,
   TouchableOpacity
 } from 'react-native';
@@ -21,17 +23,15 @@ export default class AddSetForm extends Component {
       passProps: {availableWorkouts: this.props.availableWorkouts}
     })
   }
-
   render() {
     return (
-      <View style={[styles.scene, {backgroundColor: '#FAFAFA'}]}>
+      <View style={styles.scene}>
         <TouchableOpacity onPress={this._onPress2.bind(this)}>
           <Text style={styles.currentExercise}>{this.props.currentExercise}</Text>
         </TouchableOpacity>
       </View>
     )
   }
-
   //from the original example
   _onPress() {
     this.props.navigator.push({
@@ -54,9 +54,17 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   currentExercise: {
+    color: 'white',
+    padding: 10,
+    backgroundColor: 'rgba(143, 193, 233, .5)',
+    fontSize: 20,
     textAlign: 'center',
+    // borderRadius: 20,
+    // borderWidth: 0.5,
+    // borderColor: 'white',
   },
   scene: {
+    backgroundColor: 'rgba(27, 129, 216, 1)',
     padding: 10,
     paddingTop: 74,
     flex: 1,

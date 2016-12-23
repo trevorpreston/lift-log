@@ -28,13 +28,32 @@ export default class AwesomeProject extends Component {
       message : 'HEY FRIENDS!!!',
       category: 'arms',
       group: 'biceps',
-      currentExercise: 'alternating curl',
+      currentExercise: 'exercise name',
       availableWorkouts: [
         'dumbell curl',
         'ez-bar preacher',
         'barbell curl',
         'hammer curl'
-      ]
+      ],
+      exerciseHistory: [
+        {date: '2016/12/22', name: 'ex 1', weight: 55, reps: 7},
+        {date: '2016/12/22', name: 'ex 1', weight: 55, reps: 7},
+        {date: '2016/12/23', name: 'ex 1', weight: 45, reps: 8},
+        {date: '2016/12/25', name: 'ex 1', weight: 55, reps: 9},
+        {date: '2016/12/26', name: 'ex 1', weight: 40, reps: 10},
+        {date: '2016/12/26', name: 'ex 1', weight: 50, reps: 8},
+        {date: '2016/12/26', name: 'ex 1', weight: 45, reps: 9},
+        {date: '2016/12/26', name: 'ex 1', weight: 40, reps: 11},
+        {date: '2016/12/28', name: 'ex 1', weight: 45, reps: 8},
+        {date: '2016/12/30', name: 'ex 1', weight: 60, reps: 8},
+      ],
+      newSet:{
+        date: undefined, 
+        name: undefined, 
+        weight: undefined, 
+        reps: undefined
+      },
+      
     }
   }
 
@@ -43,7 +62,7 @@ export default class AwesomeProject extends Component {
       title: 'History',
       component: ExerciseHistory,
       passProps: {
-        // availableWorkouts: this.state.availableWorkouts,
+        exerciseHistory: this.state.exerciseHistory,
       }
     })
   }
@@ -60,7 +79,9 @@ export default class AwesomeProject extends Component {
     return (
       <NavigatorIOS ref="nav" style={styles.container} initialRoute={{
           component: AddSetForm,
-          title: 'Add New Set',
+          title: 'New Set',
+          barTintColor: '#fafafa',
+          tintColor: 'rgba(27, 129, 216, 1)',
           passProps: {
             currentExercise: this.state.currentExercise,
             availableWorkouts: this.state.availableWorkouts,
