@@ -4,12 +4,16 @@ import {
 	StyleSheet, 
 	View,
 	ListView,
-	Text
+	Text,
+	TouchableOpacity
 } from 'react-native';
 
 
 
 export default class ExerciseSelectionForm extends Component {
+	updateCurrentExercise(newExercise) {
+		console.log('SELECTING NEW EXERCISE ' + newExercise)
+	}
 	render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		let workouts = ds.cloneWithRows(this.props.availableWorkouts)
@@ -17,10 +21,15 @@ export default class ExerciseSelectionForm extends Component {
 		console.log('workouts are here! ' + workouts)
 		return (
 			<View style={[styles.scene]}>
-				<Text> PICK A WORKOUT </Text>
 	      <ListView
 	        dataSource={workouts}
-	        renderRow={(rowData) => <Text>{rowData}</Text>}
+	        renderRow={(rowData) => {
+	        	return(
+	        		<TouchableOpacity>
+		        		<Text onPress={this.updateCurrentExercise('hi')} style={styles.exercise}>{rowData}</Text>
+		        	</TouchableOpacity>	
+	        	)
+	        }}
 	      />
 				{/* <Text>{this.props.greeting}</Text>
 					{workouts.map((workout, index)=>{
@@ -37,7 +46,17 @@ const styles = StyleSheet.create({
     },
     scene: {
         padding: 10,
-        paddingTop: 74,
         flex: 1
-    }
+    },
+    exercise: {
+	    color: 'white',
+	    padding: 10,
+	    backgroundColor: 'rgba(27, 129, 216, .9)',
+	    marginTop: 10,
+	    fontSize: 17,
+	    textAlign: 'center',
+    // borderRadius: 20,
+    // borderWidth: 0.5,
+    // borderColor: 'white',
+  },
 });
