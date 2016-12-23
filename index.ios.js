@@ -50,8 +50,8 @@ export default class AwesomeProject extends Component {
       newSet:{
         date: undefined, 
         name: undefined, 
-        weight: undefined, 
-        reps: undefined
+        weight: 45, 
+        reps: 8
       },
       
     }
@@ -83,6 +83,7 @@ export default class AwesomeProject extends Component {
           barTintColor: '#fafafa',
           tintColor: 'rgba(27, 129, 216, 1)',
           passProps: {
+            newSet: this.state.newSet,
             currentExercise: this.state.currentExercise,
             availableWorkouts: this.state.availableWorkouts,
           },
