@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
     marginBottom: -4
   },
   input: {
-    height: 60,
+    height: 50,
     width: 80,
     backgroundColor: 'white',
     textAlign: 'center'
@@ -123,7 +123,6 @@ const styles = StyleSheet.create({
     // backgroundColor: 'transparent',
     borderWidth: .4,
     borderColor: '#e6e6e6',
-    marginTop: 5,
     marginLeft: 15,
     marginRight: 15,
     borderRadius: 100
@@ -139,9 +138,9 @@ const styles = StyleSheet.create({
   },
   symbol: {
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 30,
     color: 'white',
     backgroundColor: 'transparent',
-    marginTop: -4
+    marginTop: -6
   }
 })

@@ -56,7 +56,6 @@ export default class AwesomeProject extends Component {
       
     }
   }
-
   onRightButtonPress() {
     this.refs.nav.push({
       title: 'History',
@@ -66,6 +65,7 @@ export default class AwesomeProject extends Component {
       }
     })
   }
+
 
     // _onRightButtonPress() {
     //   console.log('CHECK OUT DA PROPS ' + this.refs)
@@ -78,17 +78,17 @@ export default class AwesomeProject extends Component {
   render () {
     return (
       <NavigatorIOS ref="nav" style={styles.container} initialRoute={{
-          component: AddSetForm,
-          title: 'New Set',
-          barTintColor: '#fafafa',
-          tintColor: 'rgba(27, 129, 216, 1)',
-          passProps: {
-            newSet: this.state.newSet,
-            currentExercise: this.state.currentExercise,
-            availableWorkouts: this.state.availableWorkouts,
-          },
-          rightButtonTitle: 'history',
-          onRightButtonPress: this.onRightButtonPress.bind(this)
+        component: AddSetForm,
+        title: 'New Set',
+        barTintColor: '#fafafa',
+        tintColor: 'rgba(27, 129, 216, 1)',
+        passProps: {
+          newSet: this.state.newSet,
+          currentExercise: this.state.currentExercise,
+          availableWorkouts: this.state.availableWorkouts,
+        },
+        rightButtonTitle: 'history',
+        onRightButtonPress: this.onRightButtonPress.bind(this)
       }} />
 
     )
