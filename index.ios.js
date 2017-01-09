@@ -15,6 +15,7 @@ import {
   Container,
   Content
 } from 'native-base';
+
 import LinearGradient from 'react-native-linear-gradient';
 import ExerciseSelectionForm from './src/ExerciseSelectionForm'
 import AddSetForm from './src/AddSetForm'
@@ -47,6 +48,7 @@ export default class AwesomeProject extends Component {
         {date: '2016/12/28', name: 'ex 1', weight: 45, reps: 8},
         {date: '2016/12/30', name: 'ex 1', weight: 60, reps: 8},
       ],
+      newExercise: 'I AM NEW EX from STATE',
       newSet:{
         date: undefined, 
         name: undefined, 
@@ -86,6 +88,7 @@ export default class AwesomeProject extends Component {
           newSet: this.state.newSet,
           currentExercise: this.state.currentExercise,
           availableWorkouts: this.state.availableWorkouts,
+          newExercise: this.state.newExercise
         },
         rightButtonTitle: 'history',
         onRightButtonPress: this.onRightButtonPress.bind(this)

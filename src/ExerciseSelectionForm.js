@@ -8,6 +8,9 @@ import {
 	TouchableOpacity
 } from 'react-native';
 
+import ExerciseListItem from './ExerciseListItem.js'
+
+
 
 
 export default class ExerciseSelectionForm extends Component {
@@ -26,7 +29,7 @@ export default class ExerciseSelectionForm extends Component {
 	        renderRow={(rowData) => {
 	        	return(
 	        		<TouchableOpacity>
-		        		<Text onPress={this.updateCurrentExercise('hi')} style={styles.exercise}>{rowData}</Text>
+		        		<Text onPress={this.updateCurrentExercise(this.props.newExercise)} style={styles.exercise}>{rowData}</Text>
 		        	</TouchableOpacity>	
 	        	)
 	        }}

@@ -7,5 +7,5 @@ import {
 
 
 export default class ExerciseListItem extends Component {
-
+  
 }
