@@ -27,7 +27,7 @@ export default class ExerciseSelectionForm extends Component {
 	        renderRow={(rowData) => {
 	        	return(
 	        		<TouchableOpacity>
-		        		<Text onPress={this.updateCurrentExercise} style={styles.exercise}>{rowData}</Text>
+		        		<Text onPress={this.updateCurrentExercise} style={styles.exercise} value={rowData}>{rowData}</Text>
 		        	</TouchableOpacity>	
 	        	)
 	        }}
