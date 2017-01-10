@@ -8,14 +8,12 @@ import {
 	TouchableOpacity
 } from 'react-native';
 
-import ExerciseListItem from './ExerciseListItem.js'
-
 
 
 
 export default class ExerciseSelectionForm extends Component {
 	updateCurrentExercise(newExercise) {
-		console.log('SELECTING NEW EXERCISE ' + newExercise)
+		console.log('SELECTING NEW EXERCISE ')
 	}
 	render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
@@ -29,7 +27,7 @@ export default class ExerciseSelectionForm extends Component {
 	        renderRow={(rowData) => {
 	        	return(
 	        		<TouchableOpacity>
-		        		<Text onPress={this.updateCurrentExercise(this.props.newExercise)} style={styles.exercise}>{rowData}</Text>
+		        		<Text onPress={this.updateCurrentExercise} style={styles.exercise} value={rowData}>{rowData}</Text>
 		        	</TouchableOpacity>	
 	        	)
 	        }}
