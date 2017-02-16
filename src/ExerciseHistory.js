@@ -22,7 +22,6 @@ export default class ExcerciseHistory extends Component {
 			  </View>
 		  </View>
 		)
-
 	}	
 }
 

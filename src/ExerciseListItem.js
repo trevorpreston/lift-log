@@ -9,12 +9,13 @@ import {
 
 export default class ExerciseListItem extends Component {
 	updateCurrentExercise() {
-		console.log('SELECTING NEW EXERCISE')
+		console.log('SELECTING NEW EXERCISE from list item!  :D')
 	}
   render() {
+  	console.log('mounting ExerciseListItem' + styles.exercise)
   	return (
 	  	  <TouchableOpacity>
-	    		<Text onPress={ this.updateCurrentExercise } style={ styles.exercise }>asfja;slfjasdf;a</Text>
+	    		<Text onPress={ this.updateCurrentExercise } style={ [styles.exercise] }>asfja;slfjasdf;a</Text>
 	    	</TouchableOpacity>	
   	)
   }
@@ -29,4 +30,5 @@ const styles = StyleSheet.create({
 		fontSize: 17,
 		textAlign: 'center'
 	}
+	
 })

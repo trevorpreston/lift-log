@@ -57,6 +57,6 @@ const styles2 = StyleSheet.create({
         </TouchableOpacity>
       }
       style={{padding: 100}}
-              configureScene={(route, routeStack) =>
+           configureScene={(route, routeStack) =>
           Navigator.SceneConfigs.FadeAndroid}
     />
