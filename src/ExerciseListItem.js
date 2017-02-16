@@ -14,7 +14,7 @@ export default class ExerciseListItem extends Component {
   render() {
   	return (
 	  	  <TouchableOpacity>
-	    		<Text onPress={this.updateCurrentExercise} style={styles.exercise}>asfja;slfjasdf;a</Text>
+	    		<Text onPress={ this.updateCurrentExercise } style={ styles.exercise }>asfja;slfjasdf;a</Text>
 	    	</TouchableOpacity>	
   	)
   }
