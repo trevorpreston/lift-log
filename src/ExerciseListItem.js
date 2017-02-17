@@ -8,13 +8,14 @@ import {
 
 
 export default class ExerciseListItem extends Component {
-	updateCurrentExercise() {
-		console.log('SELECTING NEW EXERCISE from list item!  :D')
+	handlePressEvent() {
+		console.log('*******'+ this.props.exName)
 	}
   render() {
-  	console.log('mounting ExerciseListItem' + styles.exercise)
+  	console.log('this is ExerciseListItem value: ' + this.props.value)
+  	console.log('this is ExerciseListItem exName prop: ' + this.props.exName)
   	return (
-	    		<Text onPress={ this.updateCurrentExercise } style={ [styles.exercise] }>asfja;slfjasdf;a</Text>
+		    	<Text onPress={ this.handlePressEvent.bind(this) } style={ [styles.exercise] }>{this.props.exName}</Text>
   	)
   }
 }

@@ -67,6 +67,9 @@ export default class AwesomeProject extends Component {
       }
     })
   }
+  // updateCurrentExercise(incomingNewEx){
+  //   this.setState({currentExercise: incomingNewEx})
+  // }
 
 
     // _onRightButtonPress() {
@@ -88,7 +91,7 @@ export default class AwesomeProject extends Component {
           newSet: this.state.newSet,
           currentExercise: this.state.currentExercise,
           availableExercises: this.state.availableExcercises,
-          newExercise: this.state.newExercise
+          newExercise: this.state.newExercise,
         },
         rightButtonTitle: 'history',
         onRightButtonPress: this.onRightButtonPress.bind(this)

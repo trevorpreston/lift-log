@@ -12,9 +12,6 @@ import ExerciseListItem from './ExerciseListItem'
 
 
 export default class ExerciseSelectionForm extends Component {
-	updateCurrentExercise(newExercise) {
-		console.log('SELECTING NEW EXERCISE from form :( ')
-	}
 	render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		let exercises = ds.cloneWithRows(this.props.availableExercises)
@@ -25,10 +22,9 @@ export default class ExerciseSelectionForm extends Component {
 	      <ListView
 	        dataSource={exercises}
 	        renderRow={(rowData) => {
+      			{console.log('check out this row data ' + rowData)}
 	        	return(
-	        		<TouchableOpacity>
-		        		<ExerciseListItem />
-		        	</TouchableOpacity>
+		        		<ExerciseListItem exName={rowData} value={rowData}/>
 	        	)
 	        }}
 	      />
