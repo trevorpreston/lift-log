@@ -29,8 +29,8 @@ export default class AwesomeProject extends Component {
       message : 'HEY FRIENDS!!!',
       category: 'arms',
       group: 'biceps',
-      currentExercise: 'exercise name',
-      availableWorkouts: [
+      currentExercise: 'exercise name from state',
+      availableExcercises: [
         'dumbell curl',
         'ez-bar preacher',
         'barbell curl',
@@ -67,6 +67,9 @@ export default class AwesomeProject extends Component {
       }
     })
   }
+  // updateCurrentExercise(incomingNewEx){
+  //   this.setState({currentExercise: incomingNewEx})
+  // }
 
 
     // _onRightButtonPress() {
@@ -87,8 +90,8 @@ export default class AwesomeProject extends Component {
         passProps: {
           newSet: this.state.newSet,
           currentExercise: this.state.currentExercise,
-          availableWorkouts: this.state.availableWorkouts,
-          newExercise: this.state.newExercise
+          availableExercises: this.state.availableExcercises,
+          newExercise: this.state.newExercise,
         },
         rightButtonTitle: 'history',
         onRightButtonPress: this.onRightButtonPress.bind(this)

@@ -8,14 +8,14 @@ import {
 
 
 export default class ExerciseListItem extends Component {
-	updateCurrentExercise() {
-		console.log('SELECTING NEW EXERCISE')
+	handlePressEvent() {
+		console.log('*******'+ this.props.exName)
 	}
   render() {
+  	console.log('this is ExerciseListItem value: ' + this.props.value)
+  	console.log('this is ExerciseListItem exName prop: ' + this.props.exName)
   	return (
-	  	  <TouchableOpacity>
-	    		<Text onPress={this.updateCurrentExercise} style={styles.exercise}>asfja;slfjasdf;a</Text>
-	    	</TouchableOpacity>	
+		    	<Text onPress={ this.handlePressEvent.bind(this) } style={ [styles.exercise] }>{this.props.exName}</Text>
   	)
   }
 }
@@ -29,4 +29,5 @@ const styles = StyleSheet.create({
 		fontSize: 17,
 		textAlign: 'center'
 	}
+	
 })
