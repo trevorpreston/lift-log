@@ -14,9 +14,7 @@ export default class ExerciseListItem extends Component {
   render() {
   	console.log('mounting ExerciseListItem' + styles.exercise)
   	return (
-	  	  <TouchableOpacity>
 	    		<Text onPress={ this.updateCurrentExercise } style={ [styles.exercise] }>asfja;slfjasdf;a</Text>
-	    	</TouchableOpacity>	
   	)
   }
 }

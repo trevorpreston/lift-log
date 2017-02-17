@@ -9,14 +9,14 @@ import {
 
 export default class ExcerciseHistory extends Component {
 	render() {
-		const workouts = this.props.exerciseHistory
-		console.log('THIS IS HISTORY ' + workouts)
+		const exercises = this.props.exerciseHistory
+		console.log('THIS IS HISTORY ' + exercises)
 		return(
 			<View style={styles.scene}>
 				<View style={styles.wrapper}>
-				{workouts.map((workout, index)=>{
+				{exercises.map((exercise, index)=>{
 					return(
-						<Text key={index} style={styles.entry}>{workout.date} {workout.name} {workout.weight} {workout.reps}</Text>
+						<Text key={index} style={styles.entry}>{exercise.date} {exercise.name} {exercise.weight} {exercise.reps}</Text>
 					)
 			  })}
 			  </View>

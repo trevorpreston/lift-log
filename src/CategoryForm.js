@@ -11,17 +11,17 @@ import {
 export default class WorkoutForm extends Component {
 	render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-		let workouts = ds.cloneWithRows(this.props.availableWorkouts)
+		let exercises = ds.cloneWithRows(this.props.availableExercises)
 
-		console.log('workouts are here! ' + workouts)
+		console.log('exercises are here! ' + exercises)
 		return (
 			<View>
 	      <ListView
-	        dataSource={workouts}
+	        dataSource={exercises}
 	        renderRow={(rowData) => <Text>{rowData}</Text>}
 	      />
 				{/* <Text>{this.props.greeting}</Text>
-					{workouts.map((workout, index)=>{
+					{exercises.map((workout, index)=>{
 						return <ListView key={index}>{workout}</ListView>
 					})}*/}
 			</View>
@@ -37,7 +37,7 @@ const styles2 = StyleSheet.create({
 
     const routes = [
       {title: 'First Scene', index: 0, contents: <Text>Select an exercise</Text>},
-      {title: 'Second Scene', index: 1, contents: <WorkoutForm greeting={this.state.message} availableWorkouts={this.state.availableWorkouts}/>},
+      {title: 'Second Scene', index: 1, contents: <WorkoutForm greeting={this.state.message} availableExercises={this.state.availableExercises}/>},
     ];
 
     return (

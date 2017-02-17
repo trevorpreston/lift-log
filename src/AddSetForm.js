@@ -20,7 +20,7 @@ export default class AddSetForm extends Component {
     this.props.navigator.push({
       title: 'Select an Exercise',
       component: ExerciseSelectionForm,
-      passProps: {availableWorkouts: this.props.availableWorkouts}
+      passProps: {availableExercises: this.props.availableExercises}
     })
   }
   render() {
