@@ -20,7 +20,10 @@ export default class AddSetForm extends Component {
     this.props.navigator.push({
       title: 'Select an Exercise',
       component: ExerciseSelectionForm,
-      passProps: {availableExercises: this.props.availableExercises}
+      passProps: {
+        availableExercises: this.props.availableExercises,
+        updateCurrentExercise: this.props.updateCurrentExercise.bind(this)
+      }
     })
   }
   render() {
@@ -32,7 +35,7 @@ export default class AddSetForm extends Component {
           </View>  
         </TouchableOpacity>
         <View style={styles.inputWrapper}>
-          <Text style={styles.header}>Weight</Text>
+          <Text style={styles.header}>W</Text>
           <View style={styles.inputContainer}>
             <TouchableOpacity style={styles.hitbox}><View style={styles.button}><Text style={styles.symbol}>+</Text></View></TouchableOpacity>
             <TextInput
@@ -42,7 +45,7 @@ export default class AddSetForm extends Component {
             />
             <TouchableOpacity style={styles.hitbox}><View style={styles.button}><Text style={styles.symbol}>-</Text></View></TouchableOpacity>
           </View>
-          <Text style={styles.header2}>Reps</Text>
+          <Text style={styles.header2}>R</Text>
           <View style={styles.inputWrapper}>
             <View style={styles.inputContainer}>
               <TouchableOpacity style={styles.hitbox}><View style={styles.button}><Text style={styles.symbol}>+</Text></View></TouchableOpacity>

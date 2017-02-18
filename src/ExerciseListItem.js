@@ -9,6 +9,7 @@ import {
 
 export default class ExerciseListItem extends Component {
 	handlePressEvent() {
+		this.props.updateCurrentExercise(this.props.exName)
 		console.log('*******'+ this.props.exName)
 	}
   render() {

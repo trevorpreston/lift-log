@@ -24,7 +24,7 @@ export default class ExerciseSelectionForm extends Component {
 	        renderRow={(rowData) => {
       			{console.log('check out this row data ' + rowData)}
 	        	return(
-		        		<ExerciseListItem exName={rowData} value={rowData}/>
+		        		<ExerciseListItem exName={rowData} value={rowData} updateCurrentExercise={this.props.updateCurrentExercise.bind(this)}/>
 	        	)
 	        }}
 	      />
